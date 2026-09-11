@@ -250,6 +250,50 @@
                 .motion-card:hover {
                     transform: none;
                 }
+                .featured-float {
+                    animation: none !important;
+                }
+            }
+            @keyframes featured-float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-14px); }
+            }
+            .featured-float {
+                animation: featured-float 4.2s ease-in-out infinite;
+                will-change: transform;
+            }
+            .featured-float:nth-child(2) { animation-duration: 4.8s; animation-delay: 0.35s; }
+            .featured-float:nth-child(3) { animation-duration: 3.9s; animation-delay: 0.7s; }
+            .featured-float:nth-child(4) { animation-duration: 5.1s; animation-delay: 0.15s; }
+            .featured-float:nth-child(5) { animation-duration: 4.4s; animation-delay: 0.95s; }
+            .featured-logo {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 3rem;
+                padding: 0.75rem 1.25rem;
+                color: #322214;
+                opacity: 0.72;
+                transition: opacity 0.3s ease;
+            }
+            .featured-logo:hover {
+                opacity: 1;
+            }
+            .featured-logo--bbc {
+                gap: 0.2rem;
+            }
+            .featured-logo--bbc span {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.65rem;
+                height: 1.65rem;
+                background: currentColor;
+                color: #fff8f5;
+                font-family: Manrope, sans-serif;
+                font-size: 0.72rem;
+                font-weight: 800;
+                letter-spacing: 0.02em;
             }
         </style>
 </head>
@@ -308,6 +352,22 @@
             </div>
         </div>
     </header>
+
+    <section class="py-20 px-page-margin bg-surface-container-low relative overflow-hidden" id="featured" aria-label="As featured in">
+        <div class="absolute inset-0 pattern-bg pointer-events-none"></div>
+        <div class="max-w-screen-2xl mx-auto relative z-10 text-center">
+            <h2 class="font-label-caps text-label-caps text-secondary tracking-widest mb-12" data-motion>As Featured In</h2>
+            <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-10 md:gap-x-14">
+                <div class="featured-float featured-logo font-label-caps text-label-caps tracking-[0.2em] text-xl md:text-2xl font-extrabold" aria-label="NPR">NPR</div>
+                <div class="featured-float featured-logo featured-logo--bbc" aria-label="BBC">
+                    <span>B</span><span>B</span><span>C</span>
+                </div>
+                <div class="featured-float featured-logo font-label-caps text-label-caps tracking-[0.14em] text-lg md:text-xl font-bold" aria-label="USA Today">USA TODAY</div>
+                <div class="featured-float featured-logo font-label-caps text-label-caps tracking-[0.16em] text-xl md:text-2xl font-extrabold" aria-label="MSNBC">MSNBC</div>
+                <div class="featured-float featured-logo font-label-caps text-label-caps tracking-[0.22em] text-xl md:text-2xl font-black" aria-label="CNN">CNN</div>
+            </div>
+        </div>
+    </section>
 
     <section class="py-32 px-page-margin bg-background relative" id="about">
         <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
