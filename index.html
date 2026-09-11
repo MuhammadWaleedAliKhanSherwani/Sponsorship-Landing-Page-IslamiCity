@@ -118,6 +118,65 @@
                     padding-left: 1.5rem;
                     padding-right: 1.5rem;
                 }
+                .text-display-lg {
+                    font-size: 2.25rem !important;
+                    line-height: 1.15 !important;
+                }
+                .text-headline-lg {
+                    font-size: 1.75rem !important;
+                }
+                .text-headline-md {
+                    font-size: 1.35rem !important;
+                }
+                #hero {
+                    min-height: auto;
+                    padding-top: 7rem;
+                    padding-bottom: 3.5rem;
+                }
+                #about .arched-frame {
+                    height: 20rem;
+                }
+                .section-mobile-pad,
+                section.py-32 {
+                    padding-top: 4.5rem;
+                    padding-bottom: 4.5rem;
+                }
+                #featured {
+                    padding-top: 2.75rem;
+                    padding-bottom: 2.75rem;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                #featured .featured-heading {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                    margin-bottom: 1.75rem;
+                }
+                .featured-marquee-group {
+                    gap: 2rem;
+                    padding-right: 2rem;
+                }
+                .featured-logo {
+                    height: 2.25rem;
+                }
+                .featured-logo img {
+                    height: 1.7rem;
+                    max-width: 6.25rem;
+                }
+                .featured-logo--bbc-size img {
+                    width: calc(1.7rem * 560 / 160);
+                }
+                .featured-logo--usa-today img {
+                    width: calc(1.7rem * 560 / 160 * 1.15);
+                    height: calc(1.7rem * 1.15);
+                }
+                .featured-marquee-track {
+                    animation-duration: 20s;
+                }
+                .featured-marquee {
+                    mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+                    -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+                }
             }
             .card-carousel-wrap {
                 position: relative;
@@ -401,7 +460,7 @@
     <section class="py-20 px-page-margin bg-surface-container-low relative overflow-hidden" id="featured" aria-label="As featured in">
         <div class="absolute inset-0 pattern-bg pointer-events-none"></div>
         <div class="max-w-screen-2xl mx-auto relative z-10 text-center">
-            <h6 class="font-label-caps text-label-caps text-secondary tracking-widest mb-12" data-motion>As Featured In</h6>
+            <h6 class="featured-heading font-label-caps text-label-caps text-secondary tracking-widest mb-12" data-motion>As Featured In</h6>
             <div class="featured-marquee" data-motion>
                 <div class="featured-marquee-track">
                     <div class="featured-marquee-group">
