@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>IslamiCity Sponsorship</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "background": "#fff8f5",
+                            "inverse-surface": "#34302c",
+                            "tertiary": "#252521",
+                            "on-tertiary-fixed": "#1c1c18",
+                            "surface-container": "#f5ece7",
+                            "surface-container-low": "#fbf2ed",
+                            "on-primary-container": "#bba08c",
+                            "secondary": "#775a19",
+                            "on-secondary-fixed-variant": "#5d4201",
+                            "tertiary-fixed-dim": "#c9c6c0",
+                            "primary-container": "#4a3728",
+                            "on-tertiary-container": "#a7a59f",
+                            "on-primary-fixed-variant": "#574333",
+                            "on-secondary": "#ffffff",
+                            "surface-dim": "#e1d8d4",
+                            "on-primary": "#ffffff",
+                            "secondary-container": "#fed488",
+                            "primary-fixed": "#fbddc7",
+                            "on-tertiary-fixed-variant": "#474742",
+                            "on-tertiary": "#ffffff",
+                            "outline": "#80756d",
+                            "secondary-fixed": "#ffdea5",
+                            "surface-container-highest": "#e9e1dc",
+                            "on-error": "#ffffff",
+                            "primary-fixed-dim": "#dec1ac",
+                            "on-error-container": "#93000a",
+                            "error": "#ba1a1a",
+                            "primary": "#322214",
+                            "surface-bright": "#fff8f5",
+                            "tertiary-container": "#3b3b36",
+                            "surface": "#fff8f5",
+                            "on-secondary-container": "#785a1a",
+                            "on-surface": "#1e1b18",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-tint": "#705a49",
+                            "tertiary-fixed": "#e5e2db",
+                            "secondary-fixed-dim": "#e9c176",
+                            "outline-variant": "#d2c4bb",
+                            "on-surface-variant": "#4e453e",
+                            "error-container": "#ffdad6",
+                            "surface-container-high": "#efe6e2",
+                            "inverse-primary": "#dec1ac",
+                            "surface-variant": "#e9e1dc",
+                            "on-background": "#1e1b18",
+                            "on-primary-fixed": "#28180b",
+                            "inverse-on-surface": "#f8efea",
+                            "on-secondary-fixed": "#261900"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "spacing": {
+                            "section-gap": "48px",
+                            "gutter": "24px",
+                            "component-padding": "24px",
+                            "page-margin": "64px"
+                        },
+                        "fontFamily": {
+                            "label-caps": ["Manrope"],
+                            "body-lg": ["Manrope"],
+                            "headline-md": ["Playfair Display"],
+                            "body-md": ["Manrope"],
+                            "body-sm": ["Manrope"],
+                            "headline-lg": ["Playfair Display"],
+                            "display-lg": ["Playfair Display"],
+                            "headline-sm": ["Playfair Display"]
+                        },
+                        "fontSize": {
+                            "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                            "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                            "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                            "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                        }
+                    }
+                }
+            }
+        </script>
+    <style>
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 5rem;
+            }
+            .pattern-bg {
+                background-image: radial-gradient(#d2c4bb 1px, transparent 1px);
+                background-size: 24px 24px;
+                opacity: 0.05;
+            }
+            .arched-frame {
+                border-top-left-radius: 9999px;
+                border-top-right-radius: 9999px;
+            }
+            @media (max-width: 768px) {
+                .px-page-margin {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+            }
+            .motion-card {
+                transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .motion-card:hover {
+                transform: translateY(-8px);
+            }
+            .will-animate {
+                opacity: 0;
+                transform: translateY(28px);
+                transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .will-animate[data-motion-from="left"] {
+                transform: translateX(-40px);
+            }
+            .will-animate[data-motion-from="right"] {
+                transform: translateX(40px);
+            }
+            .will-animate.is-visible {
+                opacity: 1;
+                transform: none;
+            }
+            .will-animate.is-visible.motion-card:hover {
+                transform: translateY(-8px);
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .will-animate,
+                .will-animate[data-motion-from="left"],
+                .will-animate[data-motion-from="right"] {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                }
+                .motion-card,
+                .motion-card:hover {
+                    transform: none;
+                }
+            }
+        </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
+    <nav class="fixed top-0 w-full z-50 border-b border-primary/10 bg-background/95 backdrop-blur-md">
+        <div class="flex justify-between items-center px-page-margin h-20 max-w-screen-2xl mx-auto">
+            <a href="#hero" class="font-headline-sm text-headline-sm text-primary uppercase tracking-widest">
+                IslamiCity
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#about">ABOUT</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#audience">AUDIENCE</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#opportunities">OPPORTUNITIES</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#packages">PACKAGES</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#contact">CONTACT</a>
+            </div>
+            <a class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-primary/90 transition-colors" href="#contact">
+                Partner With Us
+            </a>
+            <button id="menu-toggle" type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-full border border-outline text-primary" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                <span class="material-symbols-outlined" id="menu-icon">menu</span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-primary/10 bg-background px-page-margin py-6">
+            <div class="flex flex-col gap-4">
+                <a class="mobile-link font-label-caps text-label-caps text-on-surface-variant" href="#about">ABOUT</a>
+                <a class="mobile-link font-label-caps text-label-caps text-on-surface-variant" href="#audience">AUDIENCE</a>
+                <a class="mobile-link font-label-caps text-label-caps text-on-surface-variant" href="#opportunities">OPPORTUNITIES</a>
+                <a class="mobile-link font-label-caps text-label-caps text-on-surface-variant" href="#packages">PACKAGES</a>
+                <a class="mobile-link font-label-caps text-label-caps text-on-surface-variant" href="#contact">CONTACT</a>
+                <a class="mobile-link inline-flex items-center justify-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-full" href="#contact">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-[921px] flex flex-col items-center justify-center pt-32 pb-24 px-page-margin overflow-hidden bg-surface-container-low" id="hero">
+        <div class="absolute inset-0 bg-[url('Assets/pexels-handika-sr-450443887-15497721.jpg')] opacity-20 mix-blend-luminosity bg-cover bg-center pointer-events-none"></div>
+        <div class="absolute inset-0 pattern-bg pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-secondary text-secondary font-label-caps text-label-caps bg-secondary/5" data-motion>
+                <span class="material-symbols-outlined" style="font-size: 16px;">handshake</span>
+                SPONSORSHIP OPPORTUNITIES
+            </div>
+            <h1 class="font-display-lg text-display-lg text-primary max-w-3xl leading-tight" data-motion>
+                Let's Build Something <span class="italic text-secondary">Meaningful</span> Together
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl" data-motion>
+                Partner with one of the world’s most trusted Islamic digital platforms—serving a global audience for over 30 years.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-4" data-motion>
+                <a class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-primary/90 transition-colors" href="#contact">
+                    Schedule a Call
+                    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+                </a>
+                <a class="inline-flex items-center justify-center gap-2 border border-outline text-primary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-surface-container transition-colors" href="#packages">
+                    View Packages
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-32 px-page-margin bg-background relative" id="about">
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative h-[600px] w-full arched-frame overflow-hidden" data-motion data-motion-from="left">
+                <div class="absolute inset-0 bg-primary/10 mix-blend-multiply z-10"></div>
+                <img class="object-cover w-full h-full" alt="Grand mosque interior" src="Assets/pexels-hkn-clk-2148641156-31167965.jpg">
+            </div>
+            <div class="flex flex-col gap-12" data-motion data-motion-from="right">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-6">About IslamiCity</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        Founded in 1995, IslamiCity is a global digital platform dedicated to sharing authentic Islamic knowledge and fostering understanding across cultures.
+                    </p>
+                    <p class="font-body-md text-body-md text-outline">
+                        With users in over 225 countries, IslamiCity reaches millions annually through trusted content, tools, and digital experiences that promote faith, compassion, and purposeful living.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-label-caps text-label-caps text-secondary mb-6 tracking-widest">WHAT MAKES ISLAMICITY UNIQUE</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4 border-b border-primary/10 pb-4">
+                            <span class="material-symbols-outlined text-secondary">verified</span>
+                            <span class="font-body-md text-body-md text-on-surface">30+ years of trusted Islamic content</span>
+                        </li>
+                        <li class="flex items-start gap-4 border-b border-primary/10 pb-4">
+                            <span class="material-symbols-outlined text-secondary">groups</span>
+                            <span class="font-body-md text-body-md text-on-surface">Non-sectarian, globally respected platform</span>
+                        </li>
+                        <li class="flex items-start gap-4 border-b border-primary/10 pb-4">
+                            <span class="material-symbols-outlined text-secondary">public</span>
+                            <span class="font-body-md text-body-md text-on-surface">Millions of engaged users worldwide</span>
+                        </li>
+                        <li class="flex items-start gap-4 pb-4">
+                            <span class="material-symbols-outlined text-secondary">apps</span>
+                            <span class="font-body-md text-body-md text-on-surface">Expanding ecosystem: Quran tools, Hadith search, AI-powered platforms</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-page-margin bg-tertiary text-on-tertiary relative overflow-hidden" id="audience">
+        <div class="absolute inset-0 bg-[url('Assets/pexels-saramazin-20465229.jpg')] opacity-20 mix-blend-luminosity bg-cover bg-center pointer-events-none"></div>
+        <div class="absolute inset-0 pattern-bg opacity-10"></div>
+        <div class="max-w-screen-2xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-motion>
+                <h2 class="font-display-lg text-display-lg text-secondary-fixed mb-6">A Global, High-Intent Audience</h2>
+                <p class="font-body-lg text-body-lg text-tertiary-fixed-dim">
+                    Partner with IslamiCity to connect your brand with a global, values-driven Muslim audience.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                <div class="motion-card bg-inverse-surface p-10 rounded-xl border border-secondary-fixed/20 text-center flex flex-col items-center" data-motion>
+                    <div class="w-16 h-16 rounded-full bg-secondary-fixed/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary-fixed" style="font-size: 32px;">group_add</span>
+                    </div>
+                    <div class="font-display-lg text-display-lg text-on-tertiary mb-2">2M+</div>
+                    <div class="font-label-caps text-label-caps text-secondary-fixed tracking-widest">ACTIVE USERS ANNUALLY</div>
+                </div>
+                <div class="motion-card bg-inverse-surface p-10 rounded-xl border border-secondary-fixed/20 text-center flex flex-col items-center" data-motion>
+                    <div class="w-16 h-16 rounded-full bg-secondary-fixed/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary-fixed" style="font-size: 32px;">visibility</span>
+                    </div>
+                    <div class="font-display-lg text-display-lg text-on-tertiary mb-2">7.8M+</div>
+                    <div class="font-label-caps text-label-caps text-secondary-fixed tracking-widest">PAGEVIEWS</div>
+                </div>
+                <div class="motion-card bg-inverse-surface p-10 rounded-xl border border-secondary-fixed/20 text-center flex flex-col items-center" data-motion>
+                    <div class="w-16 h-16 rounded-full bg-secondary-fixed/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary-fixed" style="font-size: 32px;">timer</span>
+                    </div>
+                    <div class="font-display-lg text-display-lg text-on-tertiary mb-2">4.4M+</div>
+                    <div class="font-label-caps text-label-caps text-secondary-fixed tracking-widest">SESSIONS</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="text-center" data-motion>
+                    <h3 class="font-headline-md text-headline-md text-secondary-fixed mb-8 flex items-center justify-center gap-4">
+                        <span class="material-symbols-outlined">public</span>
+                        Global Reach
+                    </h3>
+                    <ul class="space-y-6 text-tertiary-fixed-dim">
+                        <li class="flex items-center justify-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                            Users across 200+ countries
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                            United States (19%)
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                            Middle East (Saudi Arabia 12%)
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                            South Asia (India, Pakistan)
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                            United Kingdom
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center" data-motion>
+                    <h3 class="font-headline-md text-headline-md text-secondary-fixed mb-8 flex items-center justify-center gap-4">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        High-Intent Traffic
+                    </h3>
+                    <ul class="space-y-6 text-tertiary-fixed-dim">
+                        <li class="flex items-start justify-center gap-4">
+                            <span class="material-symbols-outlined text-secondary-fixed mt-1">search</span>
+                            <div>
+                                <strong class="text-on-tertiary block mb-1">63% organic search traffic</strong>
+                                Users actively seeking Islamic knowledge
+                            </div>
+                        </li>
+                        <li class="flex items-start justify-center gap-4">
+                            <span class="material-symbols-outlined text-secondary-fixed mt-1">repeat</span>
+                            <div>
+                                <strong class="text-on-tertiary block mb-1">Strong Repeat Visitation</strong>
+                                Consistent interaction across core tools
+                            </div>
+                        </li>
+                        <li class="flex items-start justify-center gap-4">
+                            <span class="material-symbols-outlined text-secondary-fixed mt-1">touch_app</span>
+                            <div>
+                                <strong class="text-on-tertiary block mb-1">47% Engagement Rate</strong>
+                                Trusted platform with a loyal user base
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-page-margin bg-background" id="opportunities">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-motion>
+                <h2 class="font-display-lg text-display-lg text-primary mb-6">Impact &amp; Reach Opportunities</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Strategic visibility across our most trafficked and trusted platforms.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="motion-card bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col" data-motion>
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-6">menu_book</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Quran Tools</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        Connect with users deeply engaged in study and recitation.
+                    </p>
+                    <div class="font-label-caps text-label-caps text-secondary border-t border-primary/10 pt-4 mt-auto">
+                        1.1M ENGAGEMENTS
+                    </div>
+                </div>
+                <div class="motion-card bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col" data-motion>
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-6">search</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Hadith Search</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        High-intent visibility during focused research and seeking of authentic sources.
+                    </p>
+                    <div class="font-label-caps text-label-caps text-secondary border-t border-primary/10 pt-4 mt-auto">
+                        1.4M ENGAGEMENTS
+                    </div>
+                </div>
+                <div class="motion-card bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col" data-motion>
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-6">calendar_month</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Hijri Converter</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        Daily utility tools driving consistent, repeat visitation.
+                    </p>
+                    <div class="font-label-caps text-label-caps text-secondary border-t border-primary/10 pt-4 mt-auto">
+                        900K ENGAGEMENTS
+                    </div>
+                </div>
+                <div class="motion-card bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col" data-motion>
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-6">campaign</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Newsletter</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        Direct access to our most engaged and loyal community members.
+                    </p>
+                    <div class="font-label-caps text-label-caps text-secondary border-t border-primary/10 pt-4 mt-auto">
+                        70K+ SUBSCRIBERS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-page-margin bg-tertiary text-on-tertiary relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('Assets/pexels-vasilis-v-1353550350-26261423.jpg')] opacity-20 mix-blend-luminosity bg-cover bg-center pointer-events-none"></div>
+        <div class="max-w-screen-2xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-motion data-motion-from="left">
+                <h2 class="font-display-lg text-display-lg text-secondary-fixed mb-8">Premium Visibility &amp; Trust</h2>
+                <p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-8">
+                    Benefit from the "halo effect" of partnering with a platform that has built trust and credibility for over three decades.
+                </p>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-secondary-fixed mt-1">verified_user</span>
+                        <div>
+                            <h4 class="font-headline-sm text-headline-sm text-on-tertiary mb-2">Brand Safety</h4>
+                            <p class="font-body-md text-body-md text-tertiary-fixed-dim">Ensure your brand is associated with positive, value-driven content.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-secondary-fixed mt-1">workspace_premium</span>
+                        <div>
+                            <h4 class="font-headline-sm text-headline-sm text-on-tertiary mb-2">Premium Positioning</h4>
+                            <p class="font-body-md text-body-md text-tertiary-fixed-dim">Stand out in an uncluttered, dignified digital environment.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-secondary-fixed mt-1">auto_graph</span>
+                        <div>
+                            <h4 class="font-headline-sm text-headline-sm text-on-tertiary mb-2">Measurable Impact</h4>
+                            <p class="font-body-md text-body-md text-tertiary-fixed-dim">Track engagement and ROI with comprehensive reporting.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-inverse-surface p-12 rounded-2xl border border-secondary-fixed/20 relative" data-motion data-motion-from="right">
+                <div class="absolute -top-6 -right-6 text-9xl text-secondary-fixed/10 material-symbols-outlined">format_quote</div>
+                <p class="font-headline-md text-headline-md text-on-tertiary italic relative z-10 mb-8">
+                    "Partnering with IslamiCity allowed us to reach our target audience with authenticity and respect. The engagement rates far exceeded our expectations."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-secondary-fixed/20 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-secondary-fixed">person</span>
+                    </div>
+                    <div>
+                        <div class="font-body-md font-bold text-on-tertiary">Previous Partner</div>
+                        <div class="font-label-caps text-label-caps text-secondary-fixed">GLOBAL RELIEF ORGANIZATION</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-page-margin bg-surface-container-low">
+        <div class="max-w-screen-2xl mx-auto">
+            <h2 class="font-display-lg text-display-lg text-primary text-center mb-16" data-motion>Exclusive Sponsorship Opportunities</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="motion-card bg-background rounded-2xl overflow-hidden border border-outline-variant/30 flex flex-col" data-motion>
+                    <div class="h-48 relative border-b border-outline-variant/30 overflow-hidden">
+                        <img class="w-full h-full object-cover" alt="Ramadan dates, Quran, and prayer beads" src="Assets/pexels-khats-cassim-556291-7427845.jpg">
+                        <div class="absolute bottom-4 left-4 font-label-caps text-label-caps text-secondary bg-background px-3 py-1 rounded-full border border-secondary/20">EXCLUSIVE</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Ramadan Takeover</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Maximize your visibility during the most important month of the year. Own the homepage and core tools during peak engagement.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> 100% SOV on Homepage</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> Dedicated Newsletter Blasts</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> Custom Content Integration</li>
+                        </ul>
+                        <a class="package-select text-center font-label-caps text-label-caps text-primary border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors" href="#contact" data-package="Ramadan Takeover">Inquire Availability</a>
+                    </div>
+                </div>
+                <div class="motion-card bg-background rounded-2xl overflow-hidden border border-outline-variant/30 flex flex-col" data-motion>
+                    <div class="h-48 relative border-b border-outline-variant/30 overflow-hidden">
+                        <img class="w-full h-full object-cover" alt="Research and scholarship" src="Assets/ResearchScholorship-Image_compressed_compressed_compressed.webp">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Content Sponsorship</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Align your brand with specific educational series, articles, or multimedia content that resonates with your values.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> "Presented by" attribution</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> In-content native ads</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> Social media amplification</li>
+                        </ul>
+                        <a class="package-select text-center font-label-caps text-label-caps text-primary border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors" href="#contact" data-package="Content Sponsorship">Explore Categories</a>
+                    </div>
+                </div>
+                <div class="motion-card bg-background rounded-2xl overflow-hidden border border-outline-variant/30 flex flex-col" data-motion>
+                    <div class="h-48 relative border-b border-outline-variant/30 overflow-hidden">
+                        <img class="w-full h-full object-cover" alt="Islamic architecture and community" src="Assets/pexels-ebuuyildiz-17824658.jpg">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Tool Integration</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Sponsor our high-utility tools (Quran, Hadith, Converter) for persistent, high-frequency visibility.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> Fixed banner placement</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> High repeat visitation</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check</span> Deep audience engagement</li>
+                        </ul>
+                        <a class="package-select text-center font-label-caps text-label-caps text-primary border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors" href="#contact" data-package="Tool Integration">View Placements</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-page-margin bg-background" id="packages">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-motion>
+                <h2 class="font-display-lg text-display-lg text-primary mb-6">Sponsorship Packages</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Tailored solutions to meet your specific goals and budget. Custom packages available upon request.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 gap-8 items-stretch lg:grid-cols-4 md:grid-cols-2">
+                <div class="motion-card bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col relative" data-motion>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-headline-sm text-primary">BRONZE</h3>
+                            <p class="font-body-sm text-on-surface-variant">Essential visibility</p>
+                        </div>
+                    </div>
+                    <div class="font-display-lg text-headline-lg text-secondary mb-6 border-b border-primary/10 pb-6">
+                        $1,500+
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="font-body-md text-on-surface">Web Banner Placements</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="font-body-md text-on-surface">High-traffic Visibility</span>
+                        </li>
+                    </ul>
+                    <a class="package-select block text-center font-label-caps text-label-caps text-primary border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors w-full" href="#contact" data-package="Bronze">Select Bronze</a>
+                </div>
+                <div class="motion-card bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col relative" data-motion>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-headline-sm text-primary">SILVER</h3>
+                            <p class="font-body-sm text-on-surface-variant">Expanded reach</p>
+                        </div>
+                    </div>
+                    <div class="font-display-lg text-headline-lg text-secondary mb-6 border-b border-primary/10 pb-6">
+                        $3,000+
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="font-body-md text-on-surface">Web Banner Placements</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="font-body-md text-on-surface">High-traffic Visibility</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="font-body-md text-on-surface">Newsletter Inclusion</span>
+                        </li>
+                    </ul>
+                    <a class="package-select block text-center font-label-caps text-label-caps text-primary border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-colors w-full" href="#contact" data-package="Silver">Select Silver</a>
+                </div>
+                <div class="motion-card bg-secondary p-8 rounded-2xl border border-secondary shadow-xl flex flex-col relative md:-mt-4" data-motion>
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-on-primary font-label-caps text-label-caps px-4 py-1 rounded-full whitespace-nowrap">
+                        MOST POPULAR
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-headline-sm text-on-secondary">GOLD</h3>
+                            <p class="font-body-sm text-on-secondary/80">High visibility</p>
+                        </div>
+                        <span class="material-symbols-outlined text-on-secondary">military_tech</span>
+                    </div>
+                    <div class="font-display-lg text-headline-lg text-on-secondary mb-6 border-b border-on-secondary/20 pb-6">
+                        $6,000+
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+                            <span class="font-body-md text-on-secondary">Premium Placements</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+                            <span class="font-body-md text-on-secondary">High-traffic Visibility</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+                            <span class="font-body-md text-on-secondary">Newsletter Inclusion</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+                            <span class="font-body-md text-on-secondary">Multiple Email Feature</span>
+                        </li>
+                    </ul>
+                    <a class="package-select block text-center font-label-caps text-label-caps bg-primary text-on-primary px-6 py-3 rounded-full hover:bg-primary/90 transition-colors w-full" href="#contact" data-package="Gold">Select Gold</a>
+                </div>
+                <div class="motion-card bg-primary p-8 rounded-2xl border border-primary flex flex-col relative" data-motion>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-headline-sm text-on-primary">PLATINUM</h3>
+                            <p class="font-body-sm text-primary-fixed-dim">Maximum reach</p>
+                        </div>
+                        <span class="material-symbols-outlined text-secondary-fixed">diamond</span>
+                    </div>
+                    <div class="font-display-lg text-headline-lg text-secondary-fixed mb-6 border-b border-on-primary/20 pb-6">
+                        $9,000+
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+                            <span class="font-body-md text-on-primary">Full Ecosystem Exposure</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+                            <span class="font-body-md text-on-primary">Campaign Integration</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+                            <span class="font-body-md text-on-primary">Priority Placements</span>
+                        </li>
+                    </ul>
+                    <a class="package-select block text-center font-label-caps text-label-caps bg-secondary text-on-secondary px-6 py-3 rounded-full hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors w-full" href="#contact" data-package="Platinum">Select Platinum</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-page-margin bg-surface-container-high" id="contact">
+        <div class="max-w-3xl mx-auto" data-motion>
+            <div class="text-center mb-12">
+                <h2 class="font-display-lg text-display-lg text-primary leading-tight mb-6">
+                    Contact IslamiCity Sponsorship
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Connect your organization with IslamiCity’s global Muslim audience while supporting access to trusted Islamic knowledge and resources.
+                </p>
+            </div>
+            <form id="sponsor-form" class="w-full text-left bg-background p-8 sm:p-10 rounded-2xl border border-outline-variant/30 shadow-sm" novalidate>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-8">Tell us a little about you</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <label class="flex flex-col gap-2">
+                        <span class="font-label-caps text-label-caps text-secondary">Name</span>
+                        <input type="text" name="name" required autocomplete="name" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. Ayesha Rahman">
+                    </label>
+                    <label class="flex flex-col gap-2">
+                        <span class="font-label-caps text-label-caps text-secondary">Organization</span>
+                        <input type="text" name="organization" required autocomplete="organization" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. ABC Foundation">
+                    </label>
+                    <label class="flex flex-col gap-2">
+                        <span class="font-label-caps text-label-caps text-secondary">Email</span>
+                        <input type="email" name="email" required autocomplete="email" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="you@organization.com">
+                    </label>
+                    <label class="flex flex-col gap-2">
+                        <span class="font-label-caps text-label-caps text-secondary">Phone <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
+                        <input type="tel" name="phone" autocomplete="tel" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="(555) 000-0000">
+                    </label>
+                </div>
+                <label class="flex flex-col gap-2 mt-6">
+                    <span class="font-label-caps text-label-caps text-secondary">What are you interested in?</span>
+                    <select name="interest" id="package-field" required class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary">
+                        <option value="" selected disabled>Select one</option>
+                        <option value="Sponsorship">Sponsorship</option>
+                        <option value="Campaign Promotion">Campaign Promotion</option>
+                        <option value="Program Partnership">Program Partnership</option>
+                        <option value="Event Sponsorship">Event Sponsorship</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+                <label class="flex flex-col gap-2 mt-6">
+                    <span class="font-label-caps text-label-caps text-secondary">Tell us about your goals <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
+                    <textarea name="goals" rows="4" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="What would you like to promote, support, or accomplish?"></textarea>
+                </label>
+                <p id="form-error" class="hidden mt-4 font-body-sm text-body-sm text-error"></p>
+                <p id="form-success" class="hidden mt-4 font-body-sm text-body-sm text-secondary"></p>
+                <button type="submit" class="mt-8 inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-primary/90 transition-colors w-full">
+                    Let’s Connect
+                    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+                </button>
+                <p class="mt-6 text-center font-body-sm text-body-sm text-outline">
+                    Your information stays with IslamiCity. No spam, ever.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="w-full py-section-gap bg-inverse-surface flex flex-col md:flex-row justify-between items-center px-page-margin border-t border-outline/20">
+        <div class="font-headline-md text-headline-md text-surface-container-lowest mb-4 md:mb-0">
+            IslamiCity
+        </div>
+        <div class="text-secondary-fixed-dim font-body-md text-body-md mb-4 md:mb-0 text-center md:text-left">
+            © 2026 IslamiCity. All Rights Reserved. Timeless Prestige in Digital Media.
+        </div>
+        <div class="flex flex-wrap gap-6 justify-center">
+            <a class="font-body-md text-body-md text-surface-variant opacity-80 hover:text-secondary-fixed hover:opacity-100 transition-all" href="mailto:sponsorship@islamicity.org">Privacy Policy</a>
+            <a class="font-body-md text-body-md text-surface-variant opacity-80 hover:text-secondary-fixed hover:opacity-100 transition-all" href="mailto:sponsorship@islamicity.org">Terms of Service</a>
+            <a class="font-body-md text-body-md text-surface-variant opacity-80 hover:text-secondary-fixed hover:opacity-100 transition-all" href="#packages">Media Kit</a>
+            <a class="font-body-md text-body-md text-surface-variant opacity-80 hover:text-secondary-fixed hover:opacity-100 transition-all" href="#contact">Contact Support</a>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var toggle = document.getElementById("menu-toggle");
+            var menu = document.getElementById("mobile-menu");
+            var icon = document.getElementById("menu-icon");
+            var form = document.getElementById("sponsor-form");
+            var packageField = document.getElementById("package-field");
+            var formError = document.getElementById("form-error");
+            var formSuccess = document.getElementById("form-success");
+
+            function closeMenu() {
+                menu.classList.add("hidden");
+                icon.textContent = "menu";
+                toggle.setAttribute("aria-expanded", "false");
+                toggle.setAttribute("aria-label", "Open menu");
+            }
+
+            function openMenu() {
+                menu.classList.remove("hidden");
+                icon.textContent = "close";
+                toggle.setAttribute("aria-expanded", "true");
+                toggle.setAttribute("aria-label", "Close menu");
+            }
+
+            toggle.addEventListener("click", function () {
+                if (menu.classList.contains("hidden")) {
+                    openMenu();
+                } else {
+                    closeMenu();
+                }
+            });
+
+            document.querySelectorAll(".mobile-link").forEach(function (link) {
+                link.addEventListener("click", closeMenu);
+            });
+
+            document.querySelectorAll(".package-select").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    packageField.value = "Sponsorship";
+                    formError.classList.add("hidden");
+                    formSuccess.classList.add("hidden");
+                });
+            });
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                formError.classList.add("hidden");
+                formSuccess.classList.add("hidden");
+
+                var name = form.elements.name.value.trim();
+                var email = form.elements.email.value.trim();
+                var organization = form.elements.organization.value.trim();
+                var phone = form.elements.phone.value.trim();
+                var interest = form.elements.interest.value;
+                var goals = form.elements.goals.value.trim();
+
+                if (!name || !email || !organization || !interest) {
+                    formError.textContent = "Please fill in your name, organization, email, and interest.";
+                    formError.classList.remove("hidden");
+                    return;
+                }
+
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    formError.textContent = "Please enter a valid email address.";
+                    formError.classList.remove("hidden");
+                    return;
+                }
+
+                var subject = "IslamiCity sponsorship: " + interest;
+                var body = [
+                    "Name: " + name,
+                    "Organization: " + organization,
+                    "Email: " + email,
+                    "Phone: " + (phone || "Not provided"),
+                    "Interest: " + interest,
+                    "",
+                    goals || "I would like to connect about IslamiCity sponsorship opportunities."
+                ].join("\n");
+
+                window.location.href = "mailto:sponsorship@islamicity.org?subject=" +
+                    encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+                formSuccess.textContent = "Your email app should open with the inquiry ready to send.";
+                formSuccess.classList.remove("hidden");
+            });
+        })();
+
+            (function () {
+                var items = document.querySelectorAll("[data-motion]");
+                if (!items.length) return;
+
+                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    return;
+                }
+
+                items.forEach(function (el) {
+                    el.classList.add("will-animate");
+                });
+
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    });
+                }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+
+                items.forEach(function (el, index) {
+                    if (el.closest("#hero")) {
+                        window.setTimeout(function () {
+                            el.classList.add("is-visible");
+                        }, 80 + index * 120);
+                    } else {
+                        observer.observe(el);
+                    }
+                });
+
+                window.setTimeout(function () {
+                    items.forEach(function (el) {
+                        el.classList.add("is-visible");
+                    });
+                }, 4000);
+            })();
+        </script>
+</body>
+</html>
