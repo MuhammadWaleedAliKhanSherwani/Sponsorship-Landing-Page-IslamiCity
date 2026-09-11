@@ -308,6 +308,35 @@
                 object-fit: contain;
                 object-position: center;
             }
+            #sponsor-form .contact-field {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #d2c4bb;
+                border-radius: 0;
+                background: transparent;
+                padding: 0.65rem 0;
+                box-shadow: none;
+                color: #1e1b18;
+            }
+            #sponsor-form .contact-field::placeholder {
+                color: #80756d;
+            }
+            #sponsor-form .contact-field:focus {
+                outline: none;
+                border-bottom-color: #775a19;
+                box-shadow: none;
+            }
+            #sponsor-form select.contact-field {
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2380756d' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 0 center;
+                padding-right: 1.5rem;
+            }
+            #sponsor-form textarea.contact-field {
+                resize: vertical;
+                min-height: 5rem;
+            }
         </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
@@ -859,36 +888,36 @@
 
     <section class="py-32 px-page-margin bg-surface-container-high" id="contact">
         <div class="max-w-screen-2xl mx-auto" data-motion>
-            <div class="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl border border-outline-variant/30 bg-background shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl border border-outline-variant/20 bg-background">
                 <div class="p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
-                    <h2 class="font-display-lg text-display-lg text-primary leading-tight mb-4">
-                        Contact IslamiCity Sponsorship
+                    <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-3">
+                        Contact our team
                     </h2>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
-                        Connect your organization with IslamiCity’s global Muslim audience while supporting access to trusted Islamic knowledge and resources.
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-10 max-w-md">
+                        Interested in sponsorship? Share a few details and we’ll get back to you.
                     </p>
-                    <form id="sponsor-form" class="w-full text-left" novalidate>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <label class="flex flex-col gap-2">
-                                <span class="font-label-caps text-label-caps text-secondary">Name</span>
-                                <input type="text" name="name" required autocomplete="name" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. Ayesha Rahman">
+                    <form id="sponsor-form" class="w-full text-left space-y-7" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
+                            <label class="flex flex-col gap-1.5">
+                                <span class="font-body-sm text-body-sm text-outline">Name</span>
+                                <input type="text" name="name" required autocomplete="name" class="contact-field" placeholder="Ayesha Rahman">
                             </label>
-                            <label class="flex flex-col gap-2">
-                                <span class="font-label-caps text-label-caps text-secondary">Organization</span>
-                                <input type="text" name="organization" required autocomplete="organization" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. ABC Foundation">
+                            <label class="flex flex-col gap-1.5">
+                                <span class="font-body-sm text-body-sm text-outline">Organization</span>
+                                <input type="text" name="organization" required autocomplete="organization" class="contact-field" placeholder="ABC Foundation">
                             </label>
-                            <label class="flex flex-col gap-2">
-                                <span class="font-label-caps text-label-caps text-secondary">Email</span>
-                                <input type="email" name="email" required autocomplete="email" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="you@organization.com">
+                            <label class="flex flex-col gap-1.5">
+                                <span class="font-body-sm text-body-sm text-outline">Email</span>
+                                <input type="email" name="email" required autocomplete="email" class="contact-field" placeholder="you@organization.com">
                             </label>
-                            <label class="flex flex-col gap-2">
-                                <span class="font-label-caps text-label-caps text-secondary">Phone <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
-                                <input type="tel" name="phone" autocomplete="tel" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="(555) 000-0000">
+                            <label class="flex flex-col gap-1.5">
+                                <span class="font-body-sm text-body-sm text-outline">Phone <span class="text-outline/70">(optional)</span></span>
+                                <input type="tel" name="phone" autocomplete="tel" class="contact-field" placeholder="(555) 000-0000">
                             </label>
                         </div>
-                        <label class="flex flex-col gap-2 mt-6">
-                            <span class="font-label-caps text-label-caps text-secondary">What are you interested in?</span>
-                            <select name="interest" id="package-field" required class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary">
+                        <label class="flex flex-col gap-1.5">
+                            <span class="font-body-sm text-body-sm text-outline">Interest</span>
+                            <select name="interest" id="package-field" required class="contact-field">
                                 <option value="" selected disabled>Select one</option>
                                 <option value="Sponsorship">Sponsorship</option>
                                 <option value="Campaign Promotion">Campaign Promotion</option>
@@ -897,17 +926,16 @@
                                 <option value="Other">Other</option>
                             </select>
                         </label>
-                        <label class="flex flex-col gap-2 mt-6">
-                            <span class="font-label-caps text-label-caps text-secondary">Tell us about your goals <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
-                            <textarea name="goals" rows="4" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="What would you like to promote, support, or accomplish?"></textarea>
+                        <label class="flex flex-col gap-1.5">
+                            <span class="font-body-sm text-body-sm text-outline">Goals <span class="text-outline/70">(optional)</span></span>
+                            <textarea name="goals" rows="3" class="contact-field" placeholder="What would you like to promote or accomplish?"></textarea>
                         </label>
-                        <p id="form-error" class="hidden mt-4 font-body-sm text-body-sm text-error"></p>
-                        <p id="form-success" class="hidden mt-4 font-body-sm text-body-sm text-secondary"></p>
-                        <button type="submit" class="mt-8 inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-primary/90 transition-colors w-full">
+                        <p id="form-error" class="hidden font-body-sm text-body-sm text-error"></p>
+                        <p id="form-success" class="hidden font-body-sm text-body-sm text-secondary"></p>
+                        <button type="submit" class="mt-2 inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-3.5 rounded-full hover:bg-primary/90 transition-colors w-full">
                             Let’s Connect
-                            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
                         </button>
-                        <p class="mt-6 text-center font-body-sm text-body-sm text-outline">
+                        <p class="font-body-sm text-body-sm text-outline">
                             Your information stays with IslamiCity. No spam, ever.
                         </p>
                     </form>
