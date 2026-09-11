@@ -261,19 +261,22 @@
             .featured-marquee {
                 overflow: hidden;
                 width: 100%;
-                mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-                -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+                mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
             }
             .featured-marquee-track {
                 display: flex;
                 width: max-content;
                 align-items: center;
-                gap: 3.5rem;
-                animation: featured-marquee 28s linear infinite;
+                animation: featured-marquee 32s linear infinite;
                 will-change: transform;
             }
-            .featured-marquee:hover .featured-marquee-track {
-                animation-play-state: paused;
+            .featured-marquee-group {
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                gap: 3.5rem;
+                padding-right: 3.5rem;
             }
             .featured-logo {
                 display: inline-flex;
@@ -401,16 +404,20 @@
             <h6 class="font-label-caps text-label-caps text-secondary tracking-widest mb-12" data-motion>As Featured In</h6>
             <div class="featured-marquee" data-motion>
                 <div class="featured-marquee-track">
-                    <div class="featured-logo featured-logo--bbc-size"><img src="Assets/featured/npr.svg" alt="NPR"></div>
-                    <div class="featured-logo"><img src="Assets/featured/bbc.svg" alt="BBC"></div>
-                    <div class="featured-logo featured-logo--usa-today"><img src="Assets/featured/usatoday.svg" alt="USA Today"></div>
-                    <div class="featured-logo featured-logo--bbc-size"><img src="Assets/featured/msnbc.svg" alt="MSNBC"></div>
-                    <div class="featured-logo"><img src="Assets/featured/cnn.svg" alt="CNN"></div>
-                    <div class="featured-logo featured-logo--bbc-size" aria-hidden="true"><img src="Assets/featured/npr.svg" alt=""></div>
-                    <div class="featured-logo" aria-hidden="true"><img src="Assets/featured/bbc.svg" alt=""></div>
-                    <div class="featured-logo featured-logo--usa-today" aria-hidden="true"><img src="Assets/featured/usatoday.svg" alt=""></div>
-                    <div class="featured-logo featured-logo--bbc-size" aria-hidden="true"><img src="Assets/featured/msnbc.svg" alt=""></div>
-                    <div class="featured-logo" aria-hidden="true"><img src="Assets/featured/cnn.svg" alt=""></div>
+                    <div class="featured-marquee-group">
+                        <div class="featured-logo featured-logo--bbc-size"><img src="Assets/featured/npr.svg" alt="NPR"></div>
+                        <div class="featured-logo"><img src="Assets/featured/bbc.svg" alt="BBC"></div>
+                        <div class="featured-logo featured-logo--usa-today"><img src="Assets/featured/usatoday.svg" alt="USA Today"></div>
+                        <div class="featured-logo featured-logo--bbc-size"><img src="Assets/featured/msnbc.svg" alt="MSNBC"></div>
+                        <div class="featured-logo"><img src="Assets/featured/cnn.svg" alt="CNN"></div>
+                    </div>
+                    <div class="featured-marquee-group" aria-hidden="true">
+                        <div class="featured-logo featured-logo--bbc-size"><img src="Assets/featured/npr.svg" alt=""></div>
+                        <div class="featured-logo"><img src="Assets/featured/bbc.svg" alt=""></div>
+                        <div class="featured-logo featured-logo--usa-today"><img src="Assets/featured/usatoday.svg" alt=""></div>
+                        <div class="featured-logo featured-logo--bbc-size"><img src="Assets/featured/msnbc.svg" alt=""></div>
+                        <div class="featured-logo"><img src="Assets/featured/cnn.svg" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>
