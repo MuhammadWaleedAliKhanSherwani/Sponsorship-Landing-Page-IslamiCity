@@ -131,7 +131,7 @@
                 scrollbar-width: none;
                 margin-left: -1.5rem;
                 margin-right: -1.5rem;
-                padding: 0.25rem 1.5rem 1rem;
+                padding: 0.25rem 1.5rem 0.5rem;
             }
             .card-carousel::-webkit-scrollbar {
                 display: none;
@@ -143,12 +143,20 @@
             .card-carousel-btn {
                 display: none;
             }
+            .card-carousel-controls {
+                display: none;
+            }
             @media (max-width: 767px) {
+                .card-carousel-controls {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.75rem;
+                    margin-top: 0.75rem;
+                }
                 .card-carousel-btn {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    z-index: 3;
+                    position: static;
+                    transform: none;
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
@@ -164,12 +172,6 @@
                 .card-carousel-btn .material-symbols-outlined {
                     font-size: 18px;
                     line-height: 1;
-                }
-                .card-carousel-btn--prev {
-                    left: 0.15rem;
-                }
-                .card-carousel-btn--next {
-                    right: 0.15rem;
                 }
                 .card-carousel-btn:disabled {
                     opacity: 0.35;
@@ -192,6 +194,7 @@
                     min-width: 0;
                     scroll-snap-align: unset;
                 }
+                .card-carousel-controls,
                 .card-carousel-btn {
                     display: none !important;
                 }
@@ -865,8 +868,11 @@
 
                 var prevBtn = makeBtn("prev", "Previous cards", "chevron_left");
                 var nextBtn = makeBtn("next", "Next cards", "chevron_right");
-                wrap.appendChild(prevBtn);
-                wrap.appendChild(nextBtn);
+                var controls = document.createElement("div");
+                controls.className = "card-carousel-controls";
+                controls.appendChild(prevBtn);
+                controls.appendChild(nextBtn);
+                wrap.appendChild(controls);
 
                 function cardStep() {
                     var card = carousel.children[0];
