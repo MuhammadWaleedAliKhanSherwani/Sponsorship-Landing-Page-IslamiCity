@@ -858,60 +858,71 @@
     </section>
 
     <section class="py-32 px-page-margin bg-surface-container-high" id="contact">
-        <div class="max-w-3xl mx-auto" data-motion>
-            <div class="text-center mb-12">
-                <h2 class="font-display-lg text-display-lg text-primary leading-tight mb-6">
-                    Contact IslamiCity Sponsorship
-                </h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                    Connect your organization with IslamiCity’s global Muslim audience while supporting access to trusted Islamic knowledge and resources.
-                </p>
-            </div>
-            <form id="sponsor-form" class="w-full text-left bg-background p-8 sm:p-10 rounded-2xl border border-outline-variant/30 shadow-sm" novalidate>
-                <h3 class="font-headline-sm text-headline-sm text-primary mb-8">Tell us a little about you</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <label class="flex flex-col gap-2">
-                        <span class="font-label-caps text-label-caps text-secondary">Name</span>
-                        <input type="text" name="name" required autocomplete="name" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. Ayesha Rahman">
-                    </label>
-                    <label class="flex flex-col gap-2">
-                        <span class="font-label-caps text-label-caps text-secondary">Organization</span>
-                        <input type="text" name="organization" required autocomplete="organization" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. ABC Foundation">
-                    </label>
-                    <label class="flex flex-col gap-2">
-                        <span class="font-label-caps text-label-caps text-secondary">Email</span>
-                        <input type="email" name="email" required autocomplete="email" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="you@organization.com">
-                    </label>
-                    <label class="flex flex-col gap-2">
-                        <span class="font-label-caps text-label-caps text-secondary">Phone <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
-                        <input type="tel" name="phone" autocomplete="tel" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="(555) 000-0000">
-                    </label>
+        <div class="max-w-screen-2xl mx-auto" data-motion>
+            <div class="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl border border-outline-variant/30 bg-background shadow-sm">
+                <div class="p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+                    <h2 class="font-display-lg text-display-lg text-primary leading-tight mb-4">
+                        Contact IslamiCity Sponsorship
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Connect your organization with IslamiCity’s global Muslim audience while supporting access to trusted Islamic knowledge and resources.
+                    </p>
+                    <form id="sponsor-form" class="w-full text-left" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <label class="flex flex-col gap-2">
+                                <span class="font-label-caps text-label-caps text-secondary">Name</span>
+                                <input type="text" name="name" required autocomplete="name" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. Ayesha Rahman">
+                            </label>
+                            <label class="flex flex-col gap-2">
+                                <span class="font-label-caps text-label-caps text-secondary">Organization</span>
+                                <input type="text" name="organization" required autocomplete="organization" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="e.g. ABC Foundation">
+                            </label>
+                            <label class="flex flex-col gap-2">
+                                <span class="font-label-caps text-label-caps text-secondary">Email</span>
+                                <input type="email" name="email" required autocomplete="email" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="you@organization.com">
+                            </label>
+                            <label class="flex flex-col gap-2">
+                                <span class="font-label-caps text-label-caps text-secondary">Phone <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
+                                <input type="tel" name="phone" autocomplete="tel" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="(555) 000-0000">
+                            </label>
+                        </div>
+                        <label class="flex flex-col gap-2 mt-6">
+                            <span class="font-label-caps text-label-caps text-secondary">What are you interested in?</span>
+                            <select name="interest" id="package-field" required class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary">
+                                <option value="" selected disabled>Select one</option>
+                                <option value="Sponsorship">Sponsorship</option>
+                                <option value="Campaign Promotion">Campaign Promotion</option>
+                                <option value="Program Partnership">Program Partnership</option>
+                                <option value="Event Sponsorship">Event Sponsorship</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
+                        <label class="flex flex-col gap-2 mt-6">
+                            <span class="font-label-caps text-label-caps text-secondary">Tell us about your goals <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
+                            <textarea name="goals" rows="4" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="What would you like to promote, support, or accomplish?"></textarea>
+                        </label>
+                        <p id="form-error" class="hidden mt-4 font-body-sm text-body-sm text-error"></p>
+                        <p id="form-success" class="hidden mt-4 font-body-sm text-body-sm text-secondary"></p>
+                        <button type="submit" class="mt-8 inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-primary/90 transition-colors w-full">
+                            Let’s Connect
+                            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+                        </button>
+                        <p class="mt-6 text-center font-body-sm text-body-sm text-outline">
+                            Your information stays with IslamiCity. No spam, ever.
+                        </p>
+                    </form>
                 </div>
-                <label class="flex flex-col gap-2 mt-6">
-                    <span class="font-label-caps text-label-caps text-secondary">What are you interested in?</span>
-                    <select name="interest" id="package-field" required class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary">
-                        <option value="" selected disabled>Select one</option>
-                        <option value="Sponsorship">Sponsorship</option>
-                        <option value="Campaign Promotion">Campaign Promotion</option>
-                        <option value="Program Partnership">Program Partnership</option>
-                        <option value="Event Sponsorship">Event Sponsorship</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </label>
-                <label class="flex flex-col gap-2 mt-6">
-                    <span class="font-label-caps text-label-caps text-secondary">Tell us about your goals <span class="normal-case tracking-normal font-body-sm text-outline">(optional)</span></span>
-                    <textarea name="goals" rows="4" class="rounded-xl border-outline-variant bg-surface-container-low focus:border-secondary focus:ring-secondary" placeholder="What would you like to promote, support, or accomplish?"></textarea>
-                </label>
-                <p id="form-error" class="hidden mt-4 font-body-sm text-body-sm text-error"></p>
-                <p id="form-success" class="hidden mt-4 font-body-sm text-body-sm text-secondary"></p>
-                <button type="submit" class="mt-8 inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-primary/90 transition-colors w-full">
-                    Let’s Connect
-                    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-                </button>
-                <p class="mt-6 text-center font-body-sm text-body-sm text-outline">
-                    Your information stays with IslamiCity. No spam, ever.
-                </p>
-            </form>
+                <div class="relative min-h-[28rem] lg:min-h-full">
+                    <img class="absolute inset-0 w-full h-full object-cover" alt="Collaborating on digital tools" src="Assets/Islamic%20Tech.jpg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/45 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-8 sm:p-10 lg:p-12">
+                        <p class="font-headline-sm text-headline-sm text-on-primary leading-snug max-w-md">
+                            “Partnering with IslamiCity connects brands with a trusted, values-driven Muslim audience—with authenticity at every touchpoint.”
+                        </p>
+                        <p class="mt-4 font-label-caps text-label-caps text-secondary-fixed tracking-widest">IslamiCity Sponsorship</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
